@@ -4,6 +4,7 @@
   --font: #000;
   --focus: #00ff99;
   --error: #ff0000;
+  --loading: #ffdd00;
 }
 
 * {

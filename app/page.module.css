@@ -59,14 +59,12 @@
 
 .form button:hover {
   border: 1px solid var(--focus);
+  color: var(--focus);
 }
 
 .form button:focus {
   outline: none;
   border: 1px solid var(--focus);
-}
-
-.form button:hover * {
   color: var(--focus);
 }
 
@@ -79,6 +77,15 @@
   animation: fade-in 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.loadButton {
+  border: 1px solid var(--loading) !important;
+}
+
+.loading {
+  animation: load 1s linear infinite;
+  color: var(--loading) !important;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -89,5 +96,14 @@
     opacity: 1;
     transform: translateY(0rem);
     filter: blur(0px);
+  }
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
