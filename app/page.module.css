@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+.box {
+  border: 1px solid var(--box);
+  padding: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.box h1 {
+  font-size: 2rem;
+  color: var(--font);
+}
+
+.input {
+  padding: 0.5rem;
+  border: 1px solid var(--box);
+  border-radius: 0.5rem;
+  width: 100%;
+  background-color: var(--background);
+  color: var(--font);
+  transition: 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--focus);
+}
+
+.form {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.form button {
+  padding: 0.5rem;
+  border: 1px solid var(--box);
+  border-radius: 0.5rem;
+  background-color: var(--background);
+  color: var(--font);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  transition: 0.2s;
+}
+
+.form button:hover {
+  border: 1px solid var(--focus);
+}
+
+.form button:focus {
+  outline: none;
+  border: 1px solid var(--focus);
+}
+
+.form button:hover * {
+  color: var(--focus);
+}
+
+.error {
+  color: var(--error);
+  font-size: 0.8rem;
+  border: 1px solid var(--error);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  animation: fade-in 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+    filter: blur(0px);
+  }
+}

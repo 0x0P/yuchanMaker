@@ -1,0 +1,25 @@
+:root {
+  --background: #ffffff;
+  --box: #000000;
+  --font: #000;
+  --focus: #00ff99;
+  --error: #ff0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --box: #ffffff;
+    --font: #ffffff;
+  }
+}
