@@ -59,8 +59,15 @@ export default function Home() {
               onChange={(e) => setPrompt(e.target.value)}
               placeholder="유찬이의 상황 넣기"
             />
-            <button type="submit" disabled={isLoading}>
-              {isLoading ? <TbLoader /> : <GoCheck />}
+            <button
+              type="submit"
+              className={isLoading ? styles.loadButton : ""}
+              disabled={isLoading}>
+              {isLoading ? (
+                <TbLoader className={styles.loading} />
+              ) : (
+                <GoCheck />
+              )}
             </button>
           </form>
           {error && <div className={styles.error}>{error}</div>}
